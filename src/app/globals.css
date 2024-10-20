@@ -73,4 +73,13 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .header {
+    @apply text-left tracking-[4px] uppercase mt-0 mb-0 marcellus text-[20px] font-medium leading-[1.75em] relative;
+  }
+  .about-paragraph {
+    @apply text-[14px] text-[--charcoal] font-light mb-5;
+  }
+  .btn-black{
+    @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px];
+  }
 }
