@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row">
       {/* md: header is vertical and other two are scrollable vertically */}
       <HomeHeader />
-      <div className="md:flex-1 md:h-full md:overflow-y-auto">
+      <div className="md:flex-1 md:h-full md:overflow-y-auto lg:flex lg:overflow-hidden">
         <HomeIntro />
         <HomeMenus />
       </div>
