@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -9,14 +10,37 @@ interface Option {
 }
 
 const OPTION_DATA: Option[] = [
-  { name: "OKALPHA", url: "/about", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "SUPERLINK", url: "/projects", desc: "FRAMER DEVELOPMENT" },
-  { name: "KAROO", url: "/technical-skills", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "WARD", url: "/", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "STUDIO", url: "/", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "MARGRAVINE", url: "/", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "CSSCO", url: "/", desc: "WEBFLOW DEVELOPMENT" },
-  { name: "YUMMYUCK", url: "/", desc: "WEBFLOW DEVELOPMENT" },
+  {
+    name: "CHAP 01",
+    url: "https://chapter-umber.vercel.app/login",
+    desc: "FRONT LEAD DEVELOPER",
+  },
+  {
+    name: "TCPL",
+    url: "https://tapipe-admin-rho.vercel.app/login",
+    desc: "FRONT LEAD DEVELOPER",
+  },
+  {
+    name: "SSEPL",
+    url: "https://ssepl-nine.vercel.app/login",
+    desc: "FRONT LEAD DEVELOPER",
+  },
+  {
+    name: "KOFFEEKODES",
+    url: "https://koffeekodes.in/",
+    desc: "FRONTEND DEVELOPER",
+  },
+  {
+    name: "OM DENTAL CARE",
+    url: "https://omdentalcare.vercel.app/",
+    desc: "-",
+  },
+  { name: "90s FASHION", url: "https://90s-fashion.vercel.app", desc: "-" },
+  {
+    name: "ARRAY VISUALIZER",
+    url: "https://array-visulizer.vercel.app/",
+    desc: "-",
+  },
 ];
 
 const OptionElement = ({
@@ -28,20 +52,15 @@ const OptionElement = ({
   url: string;
   desc: string;
 }) => {
-  const router = useRouter();
-
-  const handleRouting = () => {
-    router.push(url);
-  };
-
   return (
-    <div
-      className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal] text-[19vw] md:text-[8vw]"
-      onClick={handleRouting}
+    <Link
+      className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal] text-[19vw] md:text-[6vw]"
+      href={url}
+      target="_blank"
     >
       {name}
       <p className="text-[16px] uppercase">{desc}</p>
-    </div>
+    </Link>
   );
 };
 

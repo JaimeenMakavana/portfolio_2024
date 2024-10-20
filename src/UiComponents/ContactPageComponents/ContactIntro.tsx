@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ContactDetails = ({ name, value }: { name: string; value: string }) => {
@@ -17,8 +18,9 @@ const ContactIntro = () => {
       </h1>
 
       <p className="text-[12px] text-[--charcoal] mb-5">
-        Need a beautiful, well-structured website that you can own and maintain
-        yourself? Get in touch.
+        Looking for a dynamic, high-performance web application with a focus on
+        user experience and cutting-edge technologies? Let&apos;s connect and
+        bring your ideas to life.
       </p>
 
       <ContactDetails name="Email" value="jaimeen.makavana@gmail.com" />
@@ -26,7 +28,21 @@ const ContactIntro = () => {
 
       <div className="text-[12px] text-[--charcoal] flex">
         <p className="min-w-[110px]">On the internet:</p>
-        <span>LinkedIn</span> / <span>GitHub</span>
+        <Link
+          href={"https://github.com/JaimeenMakavana"}
+          target="_blank"
+          className="underline cursor-pointer mr-3"
+        >
+          GitHub
+        </Link>{" "}
+        /
+        <Link
+          href={"https://github.com/JaimeenMakavana"}
+          target="_blank"
+          className="underline cursor-pointer ml-3"
+        >
+          LinkedIn
+        </Link>{" "}
       </div>
     </div>
   );

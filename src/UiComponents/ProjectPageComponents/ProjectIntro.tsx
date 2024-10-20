@@ -8,15 +8,15 @@ const ProjectIntro = () => {
       </h1>
 
       <p className="text-[12px] text-[--charcoal] mb-5">
-        This is a showcase of my best work in a variety of fields including
-        Graphic and Web Design, No-Code Development, Product Design and Product
-        Management.
+        This portfolio showcases my best projects in web development, focusing
+        on React.js, Next.js, full-stack development, and frontend architecture.
       </p>
 
       <p className="text-[12px] text-[--charcoal]">
-        The world of digital design and development is constantly evolving and
-        so has my role over the last 15 years. I’m still learning and gaining
-        new skills every day.
+        The landscape of web development is ever-changing, and so is my
+        approach. From mastering modern frontend frameworks to staying current
+        with new tools and technologies, I&apos;m constantly evolving and
+        refining my skills with each project.
       </p>
     </div>
   );

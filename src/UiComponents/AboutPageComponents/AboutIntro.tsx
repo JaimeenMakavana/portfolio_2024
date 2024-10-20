@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Img1 from "@/Statics/Images/img-1 (1).jpg";
+import Link from "next/link";
 
 const AboutIntro = () => {
   return (
@@ -9,7 +11,7 @@ const AboutIntro = () => {
         <div>
           <h1 className="header !text-[50px]">About</h1>
           <h1 className="header mb-5">
-            I&apos;m Lauren. A designer, maker and problem solver
+            I&apos;m Jaimeen, a passionate React.js and Next.js Developer.
           </h1>
         </div>
         <div className="size-[100px] bg-green-200 md:hidden shrink-0">
@@ -25,30 +27,29 @@ const AboutIntro = () => {
         </div>
       </div>
       <p className="about-paragraph">
-        The cusp of art and technology has always fascinated me and I&apos;ve
-        never been afraid to just jump in and give it a go, whether it&apos;s
-        Paint, Photoshop, Sketch or CSS. I&apos;ve been designing with computers
-        since the day I first opened Microsoft Paint.
+        Technology has always intrigued me, and I&apos;ve never hesitated to
+        dive into learning new tools and frameworks, from JavaScript and
+        TypeScript to cloud services like Google Cloud Platform. My journey
+        began with frontend development, and over time, I&apos;ve gained deep
+        expertise in building dynamic, high-performance web applications.
       </p>
 
       <p className="about-paragraph">
-        Fast forward to 2023 and I&apos;ve tried it all, from Digital Campaign
-        Design and Flash Actionscript to Web Design, Animation, HTML/CSS,
-        No-Code Web Development, Product Design and Product Management.
-        Everything I have done, small or big, has been a vital stepping stone
-        for where I am today.
+        Fast forward to now, I&apos;ve worked across the full stack using the
+        MERN stack (MongoDB, Express, React, Node), along with experience in
+        state management (Redux, Zustand) and deploying on cloud platforms like
+        Vercel and Netlify. My focus is not just on writing efficient code, but
+        on creating intuitive user interfaces that enhance the user experience
+        and solve real-world problems.
       </p>
 
       <p className="about-paragraph">
-        What excites me most about being a Product Designer is being able to
-        design and create things that have purpose and solve real problems. It
-        goes beyond designing buttons and websites and involves having a passion
-        for designing experiences and solutions that help people, whether
-        it&apos;s helping them make better videos, market themselves online, or
-        buy something online. Leaning into customer insight and understanding
-        their needs, finding the right problems to solve, delivering solutions
-        as quickly as possible, learning from those and then iterating and
-        improving that value over time is the key to great product design.
+        What excites me most about being a developer is the ability to build
+        solutions that make an impact. It’s not just about writing code, but
+        understanding the end-user, identifying the right problems to solve, and
+        delivering a product that is both functional and enjoyable to use. By
+        constantly iterating and improving on the initial ideas, I strive to
+        ensure that the solutions I build bring real value.
       </p>
 
       <p className="about-paragraph">
@@ -61,50 +62,61 @@ const AboutIntro = () => {
       </h1>
 
       <p className="about-paragraph">
-        This resonates so deeply with me because I have no desire to make pretty
-        things just for the sake of it. Some people love that! But it&apos;s not
-        for me. I only want to make, design or build ideas and products that are
-        real, that matter and have an impact in the world.
+        This resonates with me deeply because I’m not interested in building
+        flashy apps for the sake of aesthetics. My drive is to build products
+        that truly matter, that solve real problems, and make a lasting impact.
       </p>
 
       <h1 className="header mb-5">Experience</h1>
 
       <ul className="about-paragraph">
-        <li>- Degree in Brand Communications</li>
+        <li>- Bachelor of Technology in Chemical Engineering</li>
         <li>
-          - 15 years experience in Digital Design, Web Development, Advertising
-          and Product Development ‍
+          - Extensive experience in Full-Stack Development and Frontend
+          Leadership ‍
         </li>
-        <li className="my-5">Within those 15 years, I have: </li>
-        <li>- 12 years experience in Web Design</li>
-        <li>- 10 years experience in Software Design</li>
-        <li>- 3 years experience in Front-end Web Development</li>
-        <li>- 5 years experience in Webflow Development</li>
-        <li>- 1 year experience in Framer Development </li>
-        <li>- 4 years experience in Product Management</li>
+        <li className="my-5">In my career, I’ve gained expertise in: </li>
+        <li>- 3+ years of experience in React.js and Next.js Development</li>
+        <li>- 1+ years of experience with MongoDB, Express, and Node.js</li>
+        <li>- State Management with Redux, Zustand, and Context API</li>
+        <li>
+          - Styling & Animation using Tailwind CSS, GSAP, and Framer Motion
+        </li>
+        <li>
+          - Cloud deployment using Google Cloud Platform, Vercel, and Netlify
+        </li>
+        <li>- Database management using MongoDB and PostgreSQL</li>
       </ul>
 
       <h1 className="header mb-5">SKILLS</h1>
 
       <p className="about-paragraph">
-        UI/UX Design / Strategy / Product Management / User Research / Agile
-        Methodologies / Collaboration / Design Sprints / Design Systems / HTML
-        and CSS / CMS Design & Architecture / Webflow Development / Framer
-        Development / Photography / Graphic Design
+        JavaScript / TypeScript / React.js / Next.js / UI Development / State
+        Management / API Integration / Responsive Design / GSAP Animations /
+        Cloud Services (GCP, Vercel, Netlify) / Frontend Architecture / Git &
+        Version Control / Agile Methodologies / Web Deployment
       </p>
 
-      <button className="btn-black mb-10">MY CV</button>
+      <button
+        className="btn-black mb-10"
+        onClick={() => window.open("/jaimeen_2024.pdf", "_blank")}
+      >
+        MY CV
+      </button>
 
       <h1 className="header mb-5">KUDOS</h1>
 
       <p className="about-paragraph">
-        Most of what is in this portfolio is team work, it&apos;s very rare
-        these days to make anything great all on your own. I have only included
-        work that I had a large contribution to, but whether it&apos;s design,
-        ideas, UX, process, engineering, mentorship, advice or creative
-        direction, the following people have influenced my growth and career
-        path in a massive way: Shawn Roos, Wayne Berry, Daniel Klopper, Michael
-        Thorne, Kobus Brummer, Pascal Righini, Jade Scully. THANK YOU.
+        I referenced the
+        <Link
+          href={"https://www.lauren-waller.com/"}
+          target="_blank"
+          className="underline cursor-pointer"
+        >
+          {" "}
+          Lauren Waller portfolio{" "}
+        </Link>{" "}
+        while developing this.
       </p>
 
       <button className="btn-black mb-10">CONTACT ME</button>
