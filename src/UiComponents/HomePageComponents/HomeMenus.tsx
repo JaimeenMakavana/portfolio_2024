@@ -2,7 +2,12 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const OPTION_DATA = [
+interface Option {
+  name: string;
+  url: string;
+}
+
+const OPTION_DATA: Option[] = [
   { name: "Work", url: "/projects" },
   { name: "About", url: "/about" },
   { name: "Shop", url: "/technical-skills" },
@@ -18,7 +23,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
 
   return (
     <li
-      className="hover:italic transition-all duration-300 cursor-pointer"
+      className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal]"
       onClick={handleRouting}
     >
       {name}
@@ -29,8 +34,8 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
 const HomeMenus = () => {
   return (
     <ul className="text-[19vw] marcellus leading-none pt-10 px-10 ">
-      {OPTION_DATA.map((option: any) => (
-        <OptionElement name={option.name} url={option.url} />
+      {OPTION_DATA.map((option) => (
+        <OptionElement key={option.name} name={option.name} url={option.url} />
       ))}
     </ul>
   );
