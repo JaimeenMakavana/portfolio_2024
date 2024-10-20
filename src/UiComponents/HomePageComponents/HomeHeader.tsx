@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Option {
@@ -6,17 +7,20 @@ interface Option {
 }
 
 const OPTION_DATA: Option[] = [
-  { name: "LI", url: "/projects" },
-  { name: "TW", url: "/about" },
-  { name: "DR", url: "/technical-skills" },
+  { name: "LI", url: "https://www.linkedin.com/in/jaimeen-makavana/" },
+  { name: "GH", url: "https://github.com/JaimeenMakavana" },
 ];
 
-const OptionElement = ({ name, url }: { name: string; url?: string }) => {
+const OptionElement = ({ name, url }: { name: string; url: string }) => {
   console.log("url::: ", url);
   return (
-    <li className="hover:underline transition-all duration-300 cursor-pointer">
+    <Link
+      href={url}
+      target="_blank"
+      className="hover:underline transition-all duration-300 cursor-pointer"
+    >
       {name}
-    </li>
+    </Link>
   );
 };
 
@@ -29,7 +33,7 @@ const HomeHeader = () => {
             <OptionElement
               key={socialMedia.name}
               name={socialMedia.name}
-              url=""
+              url={socialMedia.url}
             />
           ))}
           <li className="w-[40px] h-[2px] bg-black order-1"></li>

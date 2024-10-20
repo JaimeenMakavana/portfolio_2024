@@ -7,7 +7,7 @@ const ProjectsPage = () => {
   return (
     <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row !bg-[--charcoal] text-[--offwhite]">
       <ProjectHeader />
-      <div className="md:flex-1 md:h-full md:overflow-y-auto lg:flex lg:overflow-hidden">
+      <div className="md:flex-1 h-full overflow-y-auto lg:flex lg:overflow-hidden pb-10 md:pb-0">
         <ProjectIntro />
         <ProjectMenus />
       </div>

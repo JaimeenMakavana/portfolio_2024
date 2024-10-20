@@ -53,7 +53,7 @@ const OptionElement = ({
 }) => {
   return (
     <Link
-      className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal] text-[19vw] md:text-[6vw]"
+      className="hover:italic mb-5 transition-all duration-300 cursor-pointer text-[--charcoal] text-[10vw] md:text-[6vw]"
       href={url}
       target="_blank"
     >
@@ -65,7 +65,7 @@ const OptionElement = ({
 
 const ProjectMenus = () => {
   return (
-    <div className=" marcellus leading-none pt-10 px-10  lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]  *:text-[--offwhite] space-y-5 md:pb-20">
+    <div className="marcellus leading-none pt-10 px-10  lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
       {OPTION_DATA.map((option) => (
         <OptionElement
           key={option.name}

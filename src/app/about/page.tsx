@@ -10,7 +10,7 @@ const AboutPage = () => {
       <AboutHeader />
       <div className="md:h-full md:overflow-y-auto relative md:flex">
         <AboutIntro />
-        <div className="w-[300px] h-[400px] overflow-hidden sticky top-0 shrink-0 md:ml-32 ">
+        <div className="hidden md:block w-[300px] h-[400px] overflow-hidden sticky top-0 shrink-0 md:ml-32 ">
           <div className="size-full relative">
             <Image
               src={Img1}
