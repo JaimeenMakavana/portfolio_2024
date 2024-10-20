@@ -8,8 +8,8 @@ interface Option {
 }
 
 const OPTION_DATA: Option[] = [
-  { name: "Work", url: "/projects" },
   { name: "About", url: "/about" },
+  { name: "Work", url: "/projects" },
   { name: "Shop", url: "/technical-skills" },
   { name: "Contact", url: "/" },
 ];

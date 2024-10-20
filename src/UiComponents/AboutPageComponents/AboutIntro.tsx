@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import Img1 from "@/Statics/Images/img-1 (1).jpg";
 
 const AboutIntro = () => {
   return (
@@ -10,13 +12,23 @@ const AboutIntro = () => {
             I&apos;m Lauren. A designer, maker and problem solver
           </h1>
         </div>
-        <div className="size-[100px] bg-green-200 md:hidden shrink-0"></div>
+        <div className="size-[100px] bg-green-200 md:hidden shrink-0">
+          <div className="size-full relative">
+            <Image
+              src={Img1}
+              alt=""
+              width={400}
+              height={400}
+              className="object-contain"
+            />
+          </div>
+        </div>
       </div>
       <p className="about-paragraph">
-        The cusp of art and technology has always fascinated me and I&apos;ve never
-        been afraid to just jump in and give it a go, whether it&apos;s Paint,
-        Photoshop, Sketch or CSS. I&apos;ve been designing with computers since
-        the day I first opened Microsoft Paint.
+        The cusp of art and technology has always fascinated me and I&apos;ve
+        never been afraid to just jump in and give it a go, whether it&apos;s
+        Paint, Photoshop, Sketch or CSS. I&apos;ve been designing with computers
+        since the day I first opened Microsoft Paint.
       </p>
 
       <p className="about-paragraph">

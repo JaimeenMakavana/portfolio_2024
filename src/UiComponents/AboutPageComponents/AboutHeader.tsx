@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Option {
@@ -5,15 +7,20 @@ interface Option {
   url: string;
 }
 
-const OPTION_DATA: Option[] = [
-  { name: "HOME", url: "/projects" },
+const OPTION_DATA: Option[] = [{ name: "HOME", url: "/" }];
 
-];
+const OptionElement = ({ name, url }: { name: string; url: string }) => {
+  const router = useRouter();
 
-const OptionElement = ({ name, url }: { name: string; url?: string }) => {
-  console.log("url::: ", url);
+  const handleRouting = () => {
+    router.push(url);
+  };
+
   return (
-    <li className="hover:underline transition-all duration-300 cursor-pointer">
+    <li
+      className="hover:underline transition-all duration-300 cursor-pointer"
+      onClick={handleRouting}
+    >
       {name}
     </li>
   );
@@ -28,7 +35,7 @@ const AboutHeader = () => {
             <OptionElement
               key={socialMedia.name}
               name={socialMedia.name}
-              url=""
+              url={socialMedia.url}
             />
           ))}
           <li className="w-[40px] h-[2px] bg-black order-1"></li>
