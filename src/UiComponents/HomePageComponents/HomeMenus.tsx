@@ -11,7 +11,6 @@ const OPTION_DATA: Option[] = [
   { name: "About", url: "/about" },
   { name: "Work", url: "/projects" },
   { name: "Contact", url: "/contact" },
-  { name: "Shop", url: "/technical-skills" },
 ];
 
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
@@ -33,11 +32,17 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
 
 const HomeMenus = () => {
   return (
-    <ul className="text-[19vw] marcellus leading-none pt-10 px-10 md:text-[14vw] lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]">
-      {OPTION_DATA.map((option) => (
-        <OptionElement key={option.name} name={option.name} url={option.url} />
-      ))}
-    </ul>
+    <div className="lg:pb-20 md:flex md:items-end pt-10 px-10 lg:h-full lg:overflow-y-auto lg:flex-1">
+      <ul className="text-[19vw]  marcellus leading-none  md:text-[14vw] lg:text-[11vw]">
+        {OPTION_DATA.map((option) => (
+          <OptionElement
+            key={option.name}
+            name={option.name}
+            url={option.url}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 
