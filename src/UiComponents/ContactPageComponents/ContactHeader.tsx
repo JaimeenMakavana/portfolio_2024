@@ -26,7 +26,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const ProjectHeader = () => {
+const ContactHeader = () => {
   return (
     <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10">
       <li>
@@ -49,4 +49,4 @@ const ProjectHeader = () => {
   );
 };
 
-export default ProjectHeader;
+export default ContactHeader;

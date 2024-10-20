@@ -10,8 +10,8 @@ interface Option {
 const OPTION_DATA: Option[] = [
   { name: "About", url: "/about" },
   { name: "Work", url: "/projects" },
+  { name: "Contact", url: "/contact" },
   { name: "Shop", url: "/technical-skills" },
-  { name: "Contact", url: "/" },
 ];
 
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
