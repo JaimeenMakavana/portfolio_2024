@@ -22,9 +22,9 @@ const OptionElement = ({ name, url }: { name: string; url?: string }) => {
 
 const HomeHeader = () => {
   return (
-    <ul className="flex justify-between items-center px-10 text-[12px] py-5">
+    <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10">
       <li>
-        <ul className="flex justify-start items-center gap-5 tracking-widest">
+        <ul className="flex justify-start items-center gap-5 tracking-widest md:-rotate-90">
           {OPTION_DATA.map((socialMedia) => (
             <OptionElement
               key={socialMedia.name}
@@ -32,11 +32,13 @@ const HomeHeader = () => {
               url=""
             />
           ))}
-          <li className="w-[40px] h-[2px] bg-black"></li>
+          <li className="w-[40px] h-[2px] bg-black order-1"></li>
         </ul>
       </li>
 
-      <li>© / 2024</li>
+      <li className="md:-rotate-90 whitespace-nowrap tracking-widest">
+        © / 2024
+      </li>
     </ul>
   );
 };

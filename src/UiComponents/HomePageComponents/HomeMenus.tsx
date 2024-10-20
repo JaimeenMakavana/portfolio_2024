@@ -33,7 +33,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
 
 const HomeMenus = () => {
   return (
-    <ul className="text-[19vw] marcellus leading-none pt-10 px-10 ">
+    <ul className="text-[19vw] marcellus leading-none pt-10 px-10 md:text-[14vw]">
       {OPTION_DATA.map((option) => (
         <OptionElement key={option.name} name={option.name} url={option.url} />
       ))}

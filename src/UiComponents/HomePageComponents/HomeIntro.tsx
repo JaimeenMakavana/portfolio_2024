@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeIntro = () => {
   return (
-    <div className="pt-10 px-10">
+    <div className="pt-10 px-10 md:pt-28">
       <h1 className="uppercase text-[13px] font-medium tracking-[1.2px] mb-2">
         Lauren Waller
       </h1>
