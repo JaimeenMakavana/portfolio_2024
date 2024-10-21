@@ -61,7 +61,7 @@ body {
 .montserrat {
   font-family: "Montserrat", sans-serif;
 }
-/* Define the font */
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/GrandSlang-Roman.otf') format('truetype'); 
@@ -69,16 +69,35 @@ body {
   font-style: normal;
 }
 
-/* Apply it globally or to specific elements */
 .marcellus {
   font-family: 'MyCustomFont', sans-serif;
 }
 
-
-/* .marcellus {
-  font-family: "Marcellus", serif;
-} */
 /* ---font families--- */
+
+
+/* ---scrollbar--- */
+.scrollBar::-webkit-scrollbar {
+  width: 3px; 
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background: var(--charcoal); 
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 6px;      
+  border: 3px solid var(--offwhite); 
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+/* ---scrollbar--- */
+
+
 
 @layer base {
   * {
@@ -91,7 +110,7 @@ body {
     @apply text-left tracking-[4px] uppercase mt-0 mb-0 marcellus text-[20px] font-medium leading-[1.75em] relative;
   }
   .about-paragraph {
-    @apply text-[14px] text-[--charcoal] font-light mb-5;
+    @apply text-[14px] text-[--charcoal] font-light mb-5 md:text-[1vw];
   }
   .btn-black{
     @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px];

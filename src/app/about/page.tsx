@@ -8,9 +8,9 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row">
       <AboutHeader />
-      <div className="md:h-full md:overflow-y-auto relative md:flex">
+      <div className="md:h-full md:overflow-y-auto scrollBar relative md:flex">
         <AboutIntro />
-        <div className="hidden md:block w-[300px] h-[400px] overflow-hidden sticky top-0 shrink-0 md:ml-32 ">
+        <div className="hidden md:block w-[300px] h-[400px] overflow-hidden sticky top-0 shrink-0 md:ml-32 xl:w-[500px] ">
           <div className="size-full relative">
             <Image
               src={Img1}

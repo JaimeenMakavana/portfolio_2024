@@ -65,7 +65,7 @@ const OptionElement = ({
 
 const ProjectMenus = () => {
   return (
-    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
+    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 scrollBar lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
       {OPTION_DATA.map((option) => (
         <OptionElement
           key={option.name}
