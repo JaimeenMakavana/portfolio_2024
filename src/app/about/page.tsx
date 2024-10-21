@@ -1,12 +1,16 @@
+'use client'
 import AboutHeader from "@/UiComponents/AboutPageComponents/AboutHeader";
 import AboutIntro from "@/UiComponents/AboutPageComponents/AboutIntro";
-import React from "react";
 import Img1 from "@/Statics/Images/img-1 (2).jpg";
 import Image from "next/image";
+import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 
 const AboutPage = () => {
+
+
   return (
-    <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row">
+    <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row relative">
+      <AnimationDiv />
       <AboutHeader />
       <div className="md:h-full md:overflow-y-auto scrollBar relative md:flex">
         <AboutIntro />
