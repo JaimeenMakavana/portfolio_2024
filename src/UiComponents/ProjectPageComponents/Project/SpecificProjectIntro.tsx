@@ -54,7 +54,7 @@ const SpecificProjectIntro = () => {
         </div>
 
       </div>
-      <div className="h-dvh mb-10">
+      <div className=" mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden ">
           {ProjectData?.image1 &&
             <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
@@ -78,7 +78,7 @@ const SpecificProjectIntro = () => {
 
       </div>
 
-      <div className="h-dvh mb-10">
+      <div className=" mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
           {ProjectData?.image2 &&
             <Image src={ProjectData?.image2} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
@@ -86,7 +86,7 @@ const SpecificProjectIntro = () => {
         </div>
       </div>
 
-      <div className="h-dvh mb-10">
+      <div className=" mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
           {ProjectData?.image3 &&
             <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
