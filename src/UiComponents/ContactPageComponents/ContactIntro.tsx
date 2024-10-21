@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactDetails = ({ name, value }: { name: string; value: string }) => {
   return (
-    <div className="text-[14px] text-[--charcoal] flex justify-start items-center">
+    <div className="text-[14px] text-[--charcoal] flex justify-start items-center md:text-[1vw]">
       <p className="min-w-[70px]">{name} : </p>
       <p className="underline">{value}</p>
     </div>
@@ -17,7 +17,7 @@ const ContactIntro = () => {
         Hello,
       </h1>
 
-      <p className="text-[14px] text-[--charcoal] mb-5">
+      <p className="text-[14px] text-[--charcoal] mb-5 md:text-[1vw]">
         Looking for a dynamic, high-performance web application with a focus on
         user experience and cutting-edge technologies? Let&apos;s connect and
         bring your ideas to life.
@@ -26,7 +26,7 @@ const ContactIntro = () => {
       <ContactDetails name="Email" value="jaimeen.makavana@gmail.com" />
       <ContactDetails name="Contact" value="+91 9737114083" />
 
-      <div className="text-[12px] text-[--charcoal] flex">
+      <div className="text-[12px] text-[--charcoal] flex md:text-[1vw]">
         <p className="min-w-[110px]">On the internet:</p>
         <Link
           href={"https://github.com/JaimeenMakavana"}
