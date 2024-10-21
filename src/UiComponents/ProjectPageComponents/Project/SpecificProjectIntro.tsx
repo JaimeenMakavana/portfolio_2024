@@ -55,7 +55,9 @@ const SpecificProjectIntro = () => {
       </div>
       <div className="h-dvh mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
-          <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          {ProjectData?.image1 &&
+            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          }
         </div>
       </div>
 
@@ -77,13 +79,17 @@ const SpecificProjectIntro = () => {
 
       <div className="h-dvh mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
-          <Image src={ProjectData?.image2} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          {ProjectData?.image2 &&
+            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          }
         </div>
       </div>
 
       <div className="h-dvh mb-10">
         <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
-          <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          {ProjectData?.image3 &&
+            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+          }
         </div>
       </div>
 

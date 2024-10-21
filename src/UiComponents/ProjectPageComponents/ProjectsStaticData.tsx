@@ -14,9 +14,9 @@ export type Project = {
     role: string;
     responsibility: string;
     url: string;
-    image1: StaticImageData;
-    image2: StaticImageData;
-    image3: StaticImageData;
+    image1: StaticImageData | string;
+    image2: StaticImageData | string;
+    image3: StaticImageData | string;
     desc2: string;
     desc3: string;
 };
