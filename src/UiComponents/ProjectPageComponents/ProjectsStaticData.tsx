@@ -5,8 +5,23 @@ import Chap1Img3 from '../../Statics/Images/projects/chap1_3.png'
 import TcplImg1 from '../../Statics/Images/projects/tcpl1.png'
 import TcplImg2 from '../../Statics/Images/projects/tcpl2.png'
 import TcplImg3 from '../../Statics/Images/projects//tcpl3.jpg'
+import { StaticImageData } from 'next/image'
 
-export const PROJECTS_DATA = [
+export type Project = {
+    id: number;
+    project_name: string;
+    desc: string;
+    role: string;
+    responsibility: string;
+    url: string;
+    image1: StaticImageData;
+    image2: StaticImageData;
+    image3: StaticImageData;
+    desc2: string;
+    desc3: string;
+};
+
+export const PROJECTS_DATA: Project[] = [
     {
         id: 1,
         project_name: "Chapter 01",
@@ -43,7 +58,7 @@ export const PROJECTS_DATA = [
         url: "https://tapipe-admin-rho.vercel.app/login",
         image1: TcplImg1,
         image2: TcplImg2,
-        image3: TcplImg2,
+        image3: TcplImg3,
         desc2: "A lego-inspired website I built in Webflow for Okalpha, a Cape Town based animation studio with a heart of gold.r.",
         desc3: "A lego-inspired website I built in Webflow for Okalpha, a Cape Town based animation studio with a heart of gold.r.",
     },

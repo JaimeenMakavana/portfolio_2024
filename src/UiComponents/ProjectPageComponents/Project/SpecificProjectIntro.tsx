@@ -1,15 +1,15 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import React from "react";
-import { PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
+import { Project, PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
 import Image from "next/image";
 
 const SpecificProjectIntro = () => {
   const search = useSearchParams()
   const id = Number(search.get('id'));
 
-  const ProjectData: any = PROJECTS_DATA?.find((project) => project.id === id);
-  console.log('ProjectData::: ', ProjectData);
+  const ProjectData = PROJECTS_DATA?.find((project) => project.id === id);
+
   return (
     <div className="px-10  md:!pb-10  ">
       <div className="h-dvh ">
@@ -86,7 +86,6 @@ const SpecificProjectIntro = () => {
           <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
         </div>
       </div>
-
 
       <div className="flex flex-col justify-center items-center ">
         <h1 className="header">Check it out.</h1>
