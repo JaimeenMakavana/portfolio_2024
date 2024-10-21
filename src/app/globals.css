@@ -61,9 +61,23 @@ body {
 .montserrat {
   font-family: "Montserrat", sans-serif;
 }
-.marcellus {
-  font-family: "Marcellus", serif;
+/* Define the font */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/GrandSlang-Roman.otf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
 }
+
+/* Apply it globally or to specific elements */
+.marcellus {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+
+/* .marcellus {
+  font-family: "Marcellus", serif;
+} */
 /* ---font families--- */
 
 @layer base {
