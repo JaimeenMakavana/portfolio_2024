@@ -116,3 +116,11 @@ body {
     @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px] hover:scale-x-110 transition-all duration-500;
   }
 }
+
+
+/* ---selection of text--- */
+/* Custom styles */
+::selection {
+    background-color: var(--charcoal);
+    color: var(--offwhite);
+}
