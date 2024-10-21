@@ -9,7 +9,7 @@ const ChapterOnePage = () => {
         <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row relative">
             <AnimationDiv />
             <SpecificProjectHeader />
-            <div className="md:h-full md:overflow-y-auto scrollBar relative ">
+            <div className="md:h-full md:overflow-y-auto scrollBar relative w-full">
                 <Suspense>
                     <SpecificProjectIntro />
                 </Suspense>

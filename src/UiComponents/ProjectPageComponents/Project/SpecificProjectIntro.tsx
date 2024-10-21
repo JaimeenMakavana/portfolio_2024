@@ -20,32 +20,32 @@ const SpecificProjectIntro = () => {
       </div>
       <div className="flex justify-start items-center gap-5 mb-10">
         <div className="w-full flex flex-col justify-center items-center">
-          <h1 className="header mb-5 max-w-lg text-start  ">
+          <h1 className="header mb-5 max-w-4xl text-start ">
             {ProjectData?.desc}
           </h1>
-          <div className="max-w-lg flex flex-col md:flex-row  justify-between items-start gap-5">
+          <div className="max-w-4xl flex flex-col md:flex-row  justify-between items-start gap-5">
             <div>
-              <h1 className="underline !text-[14px]">
+              <h1 className="underline !text-[14px] md:!text-[1.1vw]">
                 ROLE
               </h1>
-              <p className="text-[--charcoal] font-light text-[12px]">
+              <p className="text-[--charcoal] font-light text-[12px] md:text-[1vw]">
                 {ProjectData?.role}
               </p>
             </div>
 
             <div>
-              <h1 className="underline !text-[14px]">
+              <h1 className="underline !text-[14px] md:!text-[1.1vw]">
                 RESPONSIBILITIES
               </h1>
-              <p className="text-[--charcoal] font-light text-[12px]">
+              <p className="text-[--charcoal] font-light text-[12px] md:text-[1vw]">
                 {ProjectData?.responsibility}
               </p>
             </div>
             <div>
-              <h1 className="underline !text-[14px]">
+              <h1 className="underline !text-[14px] md:!text-[1.1vw]">
                 URL
               </h1>
-              <p className="text-[--charcoal] font-light text-[12px]">
+              <p className="text-[--charcoal] font-light text-[12px] md:text-[1vw]">
                 {ProjectData?.url}
               </p>
             </div>
@@ -64,12 +64,12 @@ const SpecificProjectIntro = () => {
 
       <div className="flex justify-start items-center gap-5 mb-10">
         <div className="w-full flex flex-col justify-center items-center">
-          <div className="max-w-lg flex justify-between items-start gap-5">
+          <div className="max-w-4xl flex justify-between items-start gap-5">
             <div>
-              <p className="text-[--charcoal] font-light text-[12px] mb-5">
+              <p className="text-[--charcoal] font-light text-[12px] mb-5 md:text-[1vw]">
                 {ProjectData?.desc2}
               </p>
-              <p className="text-[--charcoal] font-light text-[12px] mb-5">
+              <p className="text-[--charcoal] font-light text-[12px] mb-5 md:text-[1vw]">
                 {ProjectData?.desc3}
               </p>
             </div>
