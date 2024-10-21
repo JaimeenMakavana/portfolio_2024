@@ -1,11 +1,9 @@
 'use client'
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
+import SpecificProjectHeader from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectHeader";
 import SpecificProjectIntro from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectIntro";
-import SpecificProjectHeader from "@/UiComponents/AboutPageComponents/AboutHeader";
 
 const ChapterOnePage = () => {
-
-
     return (
         <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row relative">
             <AnimationDiv />

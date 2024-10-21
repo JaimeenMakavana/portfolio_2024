@@ -7,7 +7,7 @@ interface Option {
   url: string;
 }
 
-const OPTION_DATA: Option[] = [{ name: "HOME", url: "/" }];
+const OPTION_DATA: Option[] = [{ name: "PROJECTS", url: "/projects" }];
 
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const AboutHeader = () => {
+const SpecificProjectHeader = () => {
   return (
     <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10">
       <li>
@@ -49,4 +49,4 @@ const AboutHeader = () => {
   );
 };
 
-export default AboutHeader;
+export default SpecificProjectHeader;

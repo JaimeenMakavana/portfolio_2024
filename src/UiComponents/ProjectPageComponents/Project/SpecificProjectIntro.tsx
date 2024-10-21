@@ -1,122 +1,105 @@
 "use client";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import React from "react";
-import Img1 from "@/Statics/Images/img-1 (1).jpg";
-import Link from "next/link";
+import { PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
+import Image from "next/image";
 
 const SpecificProjectIntro = () => {
+  const search = useSearchParams()
+  const id = Number(search.get('id'));
+
+  const ProjectData: any = PROJECTS_DATA?.find((project) => project.id === id);
+  console.log('ProjectData::: ', ProjectData);
   return (
     <div className="px-10  md:!pb-10  ">
       <div className="h-dvh ">
         <div className="text-[--offwhite] !bg-[--charcoal] h-[90%]  marcellus flex justify-center items-center md:">
-          <h1 className="text-[10vw]">Project Name</h1>
+          <h1 className="text-[10vw]">{ProjectData?.project_name}</h1>
         </div>
       </div>
-      <div className="flex justify-start items-center gap-5">
-        <div>
-          <h1 className="header mb-5">
-            A lego-inspired website I built in Webflow for Okalpha, a Cape Town based animation studio with a heart of gold.r.
+      <div className="flex justify-start items-center gap-5 mb-10">
+        <div className="w-full flex flex-col justify-center items-center">
+          <h1 className="header mb-5 max-w-lg text-start  ">
+            {ProjectData?.desc}
           </h1>
+          <div className="max-w-lg flex flex-col md:flex-row  justify-between items-start gap-5">
+            <div>
+              <h1 className="underline !text-[14px]">
+                ROLE
+              </h1>
+              <p className="text-[--charcoal] font-light text-[12px]">
+                {ProjectData?.role}
+              </p>
+            </div>
+
+            <div>
+              <h1 className="underline !text-[14px]">
+                RESPONSIBILITIES
+              </h1>
+              <p className="text-[--charcoal] font-light text-[12px]">
+                {ProjectData?.responsibility}
+              </p>
+            </div>
+            <div>
+              <h1 className="underline !text-[14px]">
+                URL
+              </h1>
+              <p className="text-[--charcoal] font-light text-[12px]">
+                {ProjectData?.url}
+              </p>
+            </div>
+
+          </div>
         </div>
 
       </div>
-      <p className="about-paragraph">
-        Technology has always intrigued me, and I&apos;ve never hesitated to
-        dive into learning new tools and frameworks, from JavaScript and
-        TypeScript to cloud services like Google Cloud Platform. My journey
-        began with frontend development, and over time, I&apos;ve gained deep
-        expertise in building dynamic, high-performance web applications.
-      </p>
+      <div className="h-dvh mb-10">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+          <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+        </div>
+      </div>
 
-      <p className="about-paragraph">
-        Fast forward to now, I&apos;ve worked across the full stack using the
-        MERN stack (MongoDB, Express, React, Node), along with experience in
-        state management (Redux, Zustand) and deploying on cloud platforms like
-        Vercel and Netlify. My focus is not just on writing efficient code, but
-        on creating intuitive user interfaces that enhance the user experience
-        and solve real-world problems.
-      </p>
+      <div className="flex justify-start items-center gap-5 mb-10">
+        <div className="w-full flex flex-col justify-center items-center">
+          <div className="max-w-lg flex justify-between items-start gap-5">
+            <div>
+              <p className="text-[--charcoal] font-light text-[12px] mb-5">
+                {ProjectData?.desc2}
+              </p>
+              <p className="text-[--charcoal] font-light text-[12px] mb-5">
+                {ProjectData?.desc3}
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <p className="about-paragraph">
-        What excites me most about being a developer is the ability to build
-        solutions that make an impact. It’s not just about writing code, but
-        understanding the end-user, identifying the right problems to solve, and
-        delivering a product that is both functional and enjoyable to use. By
-        constantly iterating and improving on the initial ideas, I strive to
-        ensure that the solutions I build bring real value.
-      </p>
+      </div>
 
-      <p className="about-paragraph">
-        This is one of my favourite quotes (by Peter Drucker):
-      </p>
+      <div className="h-dvh mb-10">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+          <Image src={ProjectData?.image2} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+        </div>
+      </div>
 
-      <h1 className="header mb-5">
-        “There is nothing so useless as doing efficiently that which should not
-        be done at all.”
-      </h1>
+      <div className="h-dvh mb-10">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+          <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+        </div>
+      </div>
 
-      <p className="about-paragraph">
-        This resonates with me deeply because I’m not interested in building
-        flashy apps for the sake of aesthetics. My drive is to build products
-        that truly matter, that solve real problems, and make a lasting impact.
-      </p>
 
-      <h1 className="header mb-5">Experience</h1>
-
-      <ul className="about-paragraph">
-        <li>- Bachelor of Technology in Chemical Engineering</li>
-        <li>
-          - Extensive experience in Full-Stack Development and Frontend
-          Leadership ‍
-        </li>
-        <li className="my-5">In my career, I’ve gained expertise in: </li>
-        <li>- 3+ years of experience in React.js and Next.js Development</li>
-        <li>- 1+ years of experience with MongoDB, Express, and Node.js</li>
-        <li>- State Management with Redux, Zustand, and Context API</li>
-        <li>
-          - Styling & Animation using Tailwind CSS, GSAP, and Framer Motion
-        </li>
-        <li>
-          - Cloud deployment using Google Cloud Platform, Vercel, and Netlify
-        </li>
-        <li>- Database management using MongoDB and PostgreSQL</li>
-      </ul>
-
-      <h1 className="header mb-5">SKILLS</h1>
-
-      <p className="about-paragraph">
-        JavaScript / TypeScript / React.js / Next.js / UI Development / State
-        Management / API Integration / Responsive Design / GSAP Animations /
-        Cloud Services (GCP, Vercel, Netlify) / Frontend Architecture / Git &
-        Version Control / Agile Methodologies / Web Deployment
-      </p>
-
-      <button
-        className="btn-black mb-10"
-        onClick={() => window.open("/jaimeen_2024.pdf", "_blank")}
-      >
-        MY CV
-      </button>
-
-      <h1 className="header mb-5">KUDOS</h1>
-
-      <p className="about-paragraph">
-        I referenced the
-        <Link
-          href={"https://www.lauren-waller.com/"}
-          target="_blank"
-          className="underline cursor-pointer"
+      <div className="flex flex-col justify-center items-center ">
+        <h1 className="header">Check it out.</h1>
+        <button
+          className="btn-black mb-10"
+          onClick={() => window.open(ProjectData?.url, "_blank")}
         >
-          {" "}
-          Lauren Waller portfolio{" "}
-        </Link>{" "}
-        while developing this.
-      </p>
+          {ProjectData?.url}
+        </button>
+      </div>
 
-      <Link href="/contact" className="btn-black !mb-10">
-        CONTACT ME
-      </Link>
-    </div>
+
+    </div >
   );
 };
 
