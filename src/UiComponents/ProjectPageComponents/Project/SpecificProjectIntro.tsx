@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import React from "react";
-import { Project, PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
+import { PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
 import Image from "next/image";
 
 const SpecificProjectIntro = () => {
