@@ -113,6 +113,6 @@ body {
     @apply text-[14px] text-[--charcoal] font-light mb-5 md:text-[1vw];
   }
   .btn-black{
-    @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px];
+    @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px] hover:scale-x-110 transition-all duration-500;
   }
 }
