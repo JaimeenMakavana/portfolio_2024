@@ -6,11 +6,12 @@ import Image from "next/image";
 
 const SpecificProjectIntro = () => {
   const search = useSearchParams()
-  const id = Number(search.get('id'));
+  const id = Number(search?.get('id'));
 
   const ProjectData = PROJECTS_DATA?.find((project) => project.id === id);
 
   return (
+
     <div className="px-10  md:!pb-10  ">
       <div className="h-dvh ">
         <div className="text-[--offwhite] !bg-[--charcoal] h-[90%]  marcellus flex justify-center items-center md:">
@@ -54,9 +55,9 @@ const SpecificProjectIntro = () => {
 
       </div>
       <div className="h-dvh mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden ">
           {ProjectData?.image1 &&
-            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
           }
         </div>
       </div>
@@ -78,17 +79,17 @@ const SpecificProjectIntro = () => {
       </div>
 
       <div className="h-dvh mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
           {ProjectData?.image2 &&
-            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+            <Image src={ProjectData?.image2} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
           }
         </div>
       </div>
 
       <div className="h-dvh mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center ">
+        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
           {ProjectData?.image3 &&
-            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-cover object-center max-h-full max-w-full" />
+            <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
           }
         </div>
       </div>

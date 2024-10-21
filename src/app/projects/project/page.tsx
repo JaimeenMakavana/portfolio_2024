@@ -2,6 +2,7 @@
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 import SpecificProjectHeader from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectHeader";
 import SpecificProjectIntro from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectIntro";
+import { Suspense } from "react";
 
 const ChapterOnePage = () => {
     return (
@@ -9,7 +10,9 @@ const ChapterOnePage = () => {
             <AnimationDiv />
             <SpecificProjectHeader />
             <div className="md:h-full md:overflow-y-auto scrollBar relative ">
-                <SpecificProjectIntro />
+                <Suspense>
+                    <SpecificProjectIntro />
+                </Suspense>
             </div>
         </div>
     );
