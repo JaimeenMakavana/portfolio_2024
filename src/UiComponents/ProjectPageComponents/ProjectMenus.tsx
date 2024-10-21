@@ -10,7 +10,7 @@ interface Option {
 
 const OPTION_DATA: Option[] = [
   {
-    name: "CHAP 01",
+    name: "CHAPTER 01",
     url: "https://chapter-umber.vercel.app/login",
     desc: "FRONT LEAD DEVELOPER",
   },

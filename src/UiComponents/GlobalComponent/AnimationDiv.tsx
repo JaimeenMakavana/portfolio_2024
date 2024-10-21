@@ -27,8 +27,10 @@ const AnimationDiv = () => {
         }
     }, [])
     return (
-        <div ref={shutterRef} className={`absolute inset-0 ${['/projects', "/contact"].includes(pathname) ? 'bg-[--offwhite]' : "bg-[--charcoal]"
-            }  z-[1]`}></div>
+        <div ref={shutterRef}
+            className={`absolute inset-0 ${['/projects', "/contact"].includes(pathname) ? 'bg-[--offwhite]' : "bg-[--charcoal]"}  z-[1]`}>
+
+        </div>
     )
 }
 
