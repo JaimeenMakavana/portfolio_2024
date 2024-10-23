@@ -11,6 +11,7 @@ const OPTION_DATA: Option[] = [
   { name: "About", url: "/about" },
   { name: "Work", url: "/projects" },
   { name: "Contact", url: "/contact" },
+  { name: "Blog", url: "/blog" },
 ];
 
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
