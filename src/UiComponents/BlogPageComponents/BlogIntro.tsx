@@ -17,9 +17,9 @@ const BlogIntro = () => {
       <p className="text-[12px] text-[--charcoal]">
         Web development is an ever-evolving field, and through my blogs, I aim
         to help others stay up-to-date with the latest trends, frameworks, and
-        techniques. Whether it's deep-diving into React.js, exploring frontend
-        architecture, or discussing new JavaScript features, I bring a refined
-        and evolving perspective to the table with every post.
+        techniques. Whether it&lsquo;s deep-diving into React.js, exploring
+        frontend architecture, or discussing new JavaScript features, I bring a
+        refined and evolving perspective to the table with every post.
       </p>
     </div>
   );
