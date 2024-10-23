@@ -49,12 +49,13 @@ body {
     --blue: #3e52ae;
     --nude: #f1d5bf;
     --red: #ff471a;
-    --pinkdust: #c69e91;
+    --pinkdust: #795757;
     --white: white;
     --black: black;
     --new-red: orangered;
-    --pink: #f8c9e8;
+    --pink: #629584;
     --new-pink: #ff94c1;
+    --greenish: #a5b68d;
   }
 }
 /* ---font families--- */
@@ -63,41 +64,38 @@ body {
 }
 
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('/fonts/GrandSlang-Roman.otf') format('truetype'); 
+  font-family: "MyCustomFont";
+  src: url("/fonts/GrandSlang-Roman.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .marcellus {
-  font-family: 'MyCustomFont', sans-serif;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 /* ---font families--- */
 
-
 /* ---scrollbar--- */
 .scrollBar::-webkit-scrollbar {
-  width: 3px; 
+  width: 3px;
 }
 
 .scrollBar::-webkit-scrollbar-track {
-  background: var(--charcoal); 
+  background: var(--charcoal);
 }
 
 .scrollBar::-webkit-scrollbar-thumb {
-  background-color: #888; 
-  border-radius: 6px;      
-  border: 3px solid var(--offwhite); 
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid var(--offwhite);
 }
 
 .scrollBar::-webkit-scrollbar-thumb:hover {
-  background-color: #555; 
+  background-color: #555;
 }
 
 /* ---scrollbar--- */
-
-
 
 @layer base {
   * {
@@ -112,15 +110,14 @@ body {
   .about-paragraph {
     @apply text-[14px] text-[--charcoal] font-light mb-5 md:text-[1vw];
   }
-  .btn-black{
+  .btn-black {
     @apply text-[--offwhite] bg-[--charcoal] py-3 px-10 rounded-full marcellus text-[20px] hover:scale-x-110 transition-all duration-500;
   }
 }
 
-
 /* ---selection of text--- */
 /* Custom styles */
 ::selection {
-    background-color: var(--charcoal);
-    color: var(--offwhite);
+  background-color: var(--charcoal);
+  color: var(--offwhite);
 }
