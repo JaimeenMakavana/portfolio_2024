@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutIntro = () => {
   return (
-    <div className="py-10 px-10 md:pt-28 ">
+    <div className="py-10 px-10 md:pt-28 md:!pb-10 ">
       <div className="flex justify-start items-center gap-5">
         <div>
           <h1 className="header !text-[50px]">About</h1>
@@ -119,7 +119,7 @@ const AboutIntro = () => {
         while developing this.
       </p>
 
-      <Link href="/contact" className="btn-black mb-10">
+      <Link href="/contact" className="btn-black !mb-10">
         CONTACT ME
       </Link>
     </div>

@@ -10,34 +10,34 @@ interface Option {
 
 const OPTION_DATA: Option[] = [
   {
-    name: "CHAP 01",
-    url: "https://chapter-umber.vercel.app/login",
+    name: "CHAPTER 01",
+    url: "/projects/project?id=1",
     desc: "FRONT LEAD DEVELOPER",
   },
   {
     name: "TCPL",
-    url: "https://tapipe-admin-rho.vercel.app/login",
+    url: "/projects/project?id=2",
     desc: "FRONT LEAD DEVELOPER",
   },
   {
     name: "SSEPL",
-    url: "https://ssepl-nine.vercel.app/login",
+    url: "/projects/project?id=3",
     desc: "FRONT LEAD DEVELOPER",
   },
   {
     name: "KOFFEEKODES",
-    url: "https://koffeekodes.in/",
+    url: "/projects/project?id=4",
     desc: "FRONTEND DEVELOPER",
   },
   {
     name: "OM DENTAL CARE",
-    url: "https://omdentalcare.vercel.app/",
+    url: "/projects/project?id=5",
     desc: "-",
   },
-  { name: "90s FASHION", url: "https://90s-fashion.vercel.app", desc: "-" },
+  { name: "90s FASHION", url: "/projects/project?id=6", desc: "-" },
   {
     name: "ARRAY VISUALIZER",
-    url: "https://array-visulizer.vercel.app/",
+    url: "/projects/project?id=7",
     desc: "-",
   },
 ];
@@ -55,7 +55,6 @@ const OptionElement = ({
     <Link
       className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal] text-[10vw] md:text-[6vw]"
       href={url}
-      target="_blank"
     >
       {name}
       <p className="text-[16px] uppercase">{desc}</p>
@@ -65,7 +64,7 @@ const OptionElement = ({
 
 const ProjectMenus = () => {
   return (
-    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
+    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 scrollBar lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
       {OPTION_DATA.map((option) => (
         <OptionElement
           key={option.name}
