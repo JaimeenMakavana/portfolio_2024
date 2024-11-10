@@ -7,7 +7,7 @@ import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 
 const AboutPage = () => {
   return (
-    <div className="flex flex-col justify-between h-dvh bg-[--greenish] md:overflow-hidden md:flex-row relative">
+    <div className="flex flex-col h-full justify-between bg-[--greenish] md:overflow-hidden md:flex-row relative">
       <AnimationDiv />
       <AboutHeader />
       <div className="md:h-full md:overflow-y-auto scrollBar relative md:flex">
