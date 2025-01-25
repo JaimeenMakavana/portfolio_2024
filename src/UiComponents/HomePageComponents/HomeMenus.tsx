@@ -33,7 +33,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const HomeMenus = ({ bg, txt }: { bg: string; txt: string }) => {
+const HomeMenus = () => {
   return (
     <div className="lg:pb-20 md:flex md:items-end pt-10 px-10 lg:h-full lg:overflow-y-auto scrollBar lg:flex-1">
       <ul className="text-[19vw]  marcellus leading-none space-y-3  md:text-[11vw] my-auto">

@@ -10,7 +10,6 @@ const AnimationDiv = ({
   background: string;
   color: string;
 }) => {
-  const pathname = usePathname();
   const shutterRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
