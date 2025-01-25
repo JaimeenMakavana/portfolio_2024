@@ -33,7 +33,7 @@ const OPTION_DATA: Option[] = [
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
   return (
     <Link
-      className="hover:italic transition-all duration-300 cursor-pointer text-[--charcoal] text-[10vw] md:text-[6vw]"
+      className="hover:italic transition-all duration-300 cursor-pointer text-[10vw] md:text-[6vw]"
       href={url}
       target="_blank"
     >
@@ -44,7 +44,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
 
 const BlogMenus = () => {
   return (
-    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw]  *:text-[--offwhite]  md:pb-20">
+    <div className="marcellus flex flex-col gap-5 leading-none pt-10 px-10   lg:h-full lg:overflow-y-auto lg:flex-1 lg:text-[11vw] md:pb-20">
       {OPTION_DATA.map((option) => (
         <OptionElement key={option.name} name={option.name} url={option.url} />
       ))}

@@ -12,7 +12,6 @@ const OPTION_DATA: Option[] = [
 ];
 
 const OptionElement = ({ name, url }: { name: string; url: string }) => {
-  console.log("url::: ", url);
   return (
     <Link
       href={url}
@@ -24,9 +23,9 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const HomeHeader = () => {
+const HomeHeader = ({ background }: { background: string }) => {
   return (
-    <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10">
+    <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10 ">
       <li>
         <ul className="flex justify-start items-center gap-5 tracking-widest md:-rotate-90">
           {OPTION_DATA.map((socialMedia) => (
@@ -36,7 +35,7 @@ const HomeHeader = () => {
               url={socialMedia.url}
             />
           ))}
-          <li className="w-[40px] h-[2px] bg-black order-1"></li>
+          <li className="w-[40px] h-[2px]  order-1" style={{ background }}></li>
         </ul>
       </li>
 

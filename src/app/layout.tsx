@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`montserrat bg-[--offwhite]`}>{children}</body>
+      <body className={`montserrat`}>{children}</body>
     </html>
   );
 }

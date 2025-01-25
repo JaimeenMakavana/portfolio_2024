@@ -26,7 +26,7 @@ const OptionElement = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const AboutHeader = () => {
+const AboutHeader = ({background}:{background:string}) => {
   return (
     <ul className="flex justify-between items-center px-10 text-[12px] py-5 md:w-[100px] md:flex-col md:h-dvh md:pt-20 md:pb-10">
       <li>
@@ -38,7 +38,10 @@ const AboutHeader = () => {
               url={socialMedia.url}
             />
           ))}
-          <li className="w-[40px] h-[2px] bg-black order-1"></li>
+          <li
+            className="w-[40px] h-[2px] bg-black order-1"
+            style={{ background }}
+          ></li>
         </ul>
       </li>
 

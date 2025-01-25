@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutIntro = () => {
   return (
-    <div className="py-10 px-10 md:pt-28 md:!pb-10 ">
+    <div className="py-10 px-10 md:py-28  ">
       <div className="flex justify-start items-center gap-5">
         <div>
           <h1 className="header !text-[50px]">About</h1>
@@ -26,7 +26,7 @@ const AboutIntro = () => {
           </div>
         </div>
       </div>
-      <p className="about-paragraph">
+      <p className="about-paragraph text-inherit">
         Technology has always intrigued me, and I&apos;ve never hesitated to
         dive into learning new tools and frameworks, from JavaScript and
         TypeScript to cloud services like Google Cloud Platform. My journey
@@ -34,7 +34,7 @@ const AboutIntro = () => {
         expertise in building dynamic, high-performance web applications.
       </p>
 
-      <p className="about-paragraph">
+      <p className="about-paragraph text-inherit">
         Fast forward to now, I&apos;ve worked across the full stack using the
         MERN stack (MongoDB, Express, React, Node), along with experience in
         state management (Redux, Zustand) and deploying on cloud platforms like
@@ -43,7 +43,7 @@ const AboutIntro = () => {
         and solve real-world problems.
       </p>
 
-      <p className="about-paragraph">
+      <p className="about-paragraph text-inherit">
         What excites me most about being a developer is the ability to build
         solutions that make an impact. It’s not just about writing code, but
         understanding the end-user, identifying the right problems to solve, and
@@ -52,7 +52,7 @@ const AboutIntro = () => {
         ensure that the solutions I build bring real value.
       </p>
 
-      <p className="about-paragraph">
+      <p className="about-paragraph text-inherit">
         This is one of my favourite quotes (by Peter Drucker):
       </p>
 
@@ -69,7 +69,7 @@ const AboutIntro = () => {
 
       <h1 className="header mb-5">Experience</h1>
 
-      <ul className="about-paragraph">
+      <ul className="about-paragraph text-inherit">
         <li>- Bachelor of Technology in Chemical Engineering</li>
         <li>
           - Extensive experience in Full-Stack Development and Frontend
@@ -90,7 +90,7 @@ const AboutIntro = () => {
 
       <h1 className="header mb-5">SKILLS</h1>
 
-      <p className="about-paragraph">
+      <p className="about-paragraph text-inherit">
         JavaScript / TypeScript / React.js / Next.js / UI Development / State
         Management / API Integration / Responsive Design / GSAP Animations /
         Cloud Services (GCP, Vercel, Netlify) / Frontend Architecture / Git &
@@ -98,7 +98,7 @@ const AboutIntro = () => {
       </p>
 
       <button
-        className="btn-black mb-10"
+        className="btn-black mb-10 text-inherit bg-inherit border border-black"
         onClick={() => window.open("/jaimeen_2024.pdf", "_blank")}
       >
         MY CV
@@ -111,7 +111,7 @@ const AboutIntro = () => {
         <Link
           href={"https://www.lauren-waller.com/"}
           target="_blank"
-          className="underline cursor-pointer"
+          className="underline cursor-pointer "
         >
           {" "}
           Lauren Waller portfolio{" "}
@@ -119,7 +119,10 @@ const AboutIntro = () => {
         while developing this.
       </p>
 
-      <Link href="/contact" className="btn-black !mb-10">
+      <Link
+        href="/contact"
+        className="btn-black !mb-10 text-inherit text-inherit bg-inherit border border-black"
+      >
         CONTACT ME
       </Link>
     </div>

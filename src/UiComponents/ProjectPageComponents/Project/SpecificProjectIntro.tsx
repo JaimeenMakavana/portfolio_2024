@@ -1,20 +1,19 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import React from "react";
-import { PROJECTS_DATA } from '@/UiComponents/ProjectPageComponents/ProjectsStaticData'
+import { PROJECTS_DATA } from "@/UiComponents/ProjectPageComponents/ProjectsStaticData";
 import Image from "next/image";
 
 const SpecificProjectIntro = () => {
-  const search = useSearchParams()
-  const id = Number(search?.get('id'));
+  const search = useSearchParams();
+  const id = Number(search?.get("id"));
 
   const ProjectData = PROJECTS_DATA?.find((project) => project.id === id);
 
   return (
-
     <div className="px-10  md:!pb-10  ">
       <div className="h-dvh ">
-        <div className="text-[--offwhite] !bg-[--charcoal] h-[90%]  marcellus flex justify-center items-center md:">
+        <div className="h-[90%]  marcellus flex justify-center items-center md:">
           <h1 className="text-[10vw]">{ProjectData?.project_name}</h1>
         </div>
       </div>
@@ -25,9 +24,7 @@ const SpecificProjectIntro = () => {
           </h1>
           <div className="max-w-4xl flex flex-col md:flex-row  justify-between items-start gap-5">
             <div>
-              <h1 className="underline !text-[14px] md:!text-[1.1vw]">
-                ROLE
-              </h1>
+              <h1 className="underline !text-[14px] md:!text-[1.1vw]">ROLE</h1>
               <p className="text-[--charcoal] font-light text-[12px] md:text-[1vw]">
                 {ProjectData?.role}
               </p>
@@ -42,23 +39,25 @@ const SpecificProjectIntro = () => {
               </p>
             </div>
             <div>
-              <h1 className="underline !text-[14px] md:!text-[1.1vw]">
-                URL
-              </h1>
+              <h1 className="underline !text-[14px] md:!text-[1.1vw]">URL</h1>
               <p className="text-[--charcoal] font-light text-[12px] md:text-[1vw]">
                 {ProjectData?.url}
               </p>
             </div>
-
           </div>
         </div>
-
       </div>
       <div className=" mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden ">
-          {ProjectData?.image1 &&
-            <Image src={ProjectData?.image1} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
-          }
+        <div className="h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden ">
+          {ProjectData?.image1 && (
+            <Image
+              src={ProjectData?.image1}
+              alt={""}
+              width={1000}
+              height={1000}
+              className="object-contain object-center max-h-full max-w-full"
+            />
+          )}
         </div>
       </div>
 
@@ -75,22 +74,33 @@ const SpecificProjectIntro = () => {
             </div>
           </div>
         </div>
-
       </div>
 
       <div className=" mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
-          {ProjectData?.image2 &&
-            <Image src={ProjectData?.image2} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
-          }
+        <div className="h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
+          {ProjectData?.image2 && (
+            <Image
+              src={ProjectData?.image2}
+              alt={""}
+              width={1000}
+              height={1000}
+              className="object-contain object-center max-h-full max-w-full"
+            />
+          )}
         </div>
       </div>
 
       <div className=" mb-10">
-        <div className="!bg-[--offwhite] h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
-          {ProjectData?.image3 &&
-            <Image src={ProjectData?.image3} alt={''} width={1000} height={1000} className="object-contain object-center max-h-full max-w-full" />
-          }
+        <div className="h-full  marcellus flex justify-center relative items-center shadow-md  overflow-hidden">
+          {ProjectData?.image3 && (
+            <Image
+              src={ProjectData?.image3}
+              alt={""}
+              width={1000}
+              height={1000}
+              className="object-contain object-center max-h-full max-w-full"
+            />
+          )}
         </div>
       </div>
 
@@ -103,9 +113,7 @@ const SpecificProjectIntro = () => {
           {ProjectData?.url}
         </button>
       </div>
-
-
-    </div >
+    </div>
   );
 };
 

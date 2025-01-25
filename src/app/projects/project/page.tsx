@@ -1,21 +1,33 @@
-'use client'
+"use client";
+import { lightGradients } from "@/app/page";
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 import SpecificProjectHeader from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectHeader";
 import SpecificProjectIntro from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectIntro";
 import { Suspense } from "react";
 
 const ChapterOnePage = () => {
-    return (
-        <div className="flex flex-col justify-between h-dvh md:overflow-hidden md:flex-row relative">
-            <AnimationDiv />
-            <SpecificProjectHeader />
-            <div className="md:h-full md:overflow-y-auto scrollBar relative w-full">
-                <Suspense>
-                    <SpecificProjectIntro />
-                </Suspense>
-            </div>
-        </div>
-    );
+  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+
+  return (
+    <div
+      style={{
+        background: lightGradients[randomIndex].background,
+        color: lightGradients[randomIndex].text,
+      }}
+      className="flex flex-col justify-between h-dvh overflow-y-auto md:overflow-hidden md:flex-row relative"
+    >
+      <AnimationDiv
+        background={lightGradients[randomIndex].background}
+        color={lightGradients[randomIndex].text}
+      />
+      <SpecificProjectHeader  background={lightGradients[randomIndex].background} />
+      <div className="md:h-full md:overflow-y-auto scrollBar relative w-full">
+        <Suspense>
+          <SpecificProjectIntro />
+        </Suspense>
+      </div>
+    </div>
+  );
 };
 
 export default ChapterOnePage;
