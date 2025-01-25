@@ -4,9 +4,9 @@ import AboutIntro from "@/UiComponents/AboutPageComponents/AboutIntro";
 import Img1 from "@/Statics/Images/img-1 (2).jpg";
 import Image from "next/image";
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
-import { lightGradients } from "../page";
+import useStore from "@/store/store";
 const AboutPage = () => {
-  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+  const { lightGradients, randomIndex } = useStore();
 
   return (
     <div

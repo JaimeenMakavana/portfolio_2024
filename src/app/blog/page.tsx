@@ -1,11 +1,11 @@
+"use client";
 import BlogHeader from "@/UiComponents/BlogPageComponents/BlogHeader";
 import BlogIntro from "@/UiComponents/BlogPageComponents/BlogIntro";
 import BlogMenus from "@/UiComponents/BlogPageComponents/BlogMenus";
-import React from "react";
-import { lightGradients } from "../page";
+import useStore from "@/store/store";
 
 const BlogPage = () => {
-  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+  const { lightGradients, randomIndex } = useStore();
 
   return (
     <div

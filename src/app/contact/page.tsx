@@ -1,12 +1,11 @@
+"use client";
 import ContactHeader from "@/UiComponents/ContactPageComponents/ContactHeader";
 import ContactIntro from "@/UiComponents/ContactPageComponents/ContactIntro";
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
-
-import React from "react";
-import { lightGradients } from "../page";
+import useStore from "@/store/store";
 
 const ContactPage = () => {
-  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+  const { lightGradients, randomIndex } = useStore();
 
   return (
     <div

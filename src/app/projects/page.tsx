@@ -1,12 +1,13 @@
+"use client";
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 import ProjectHeader from "@/UiComponents/ProjectPageComponents/ProjectHeader";
 import ProjectIntro from "@/UiComponents/ProjectPageComponents/ProjectIntro";
 import ProjectMenus from "@/UiComponents/ProjectPageComponents/ProjectMenus";
 import React from "react";
-import { lightGradients } from "../page";
+import useStore from "@/store/store";
 
 const ProjectsPage = () => {
-  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+  const { lightGradients, randomIndex } = useStore();
 
   return (
     <div
@@ -20,7 +21,7 @@ const ProjectsPage = () => {
         background={lightGradients[randomIndex].background}
         color={lightGradients[randomIndex].text}
       />
-      <ProjectHeader  background={lightGradients[randomIndex].background}/>
+      <ProjectHeader background={lightGradients[randomIndex].background} />
       <div className="md:flex-1 h-full overflow-y-auto lg:flex lg:overflow-hidden pb-10 md:pb-0">
         <ProjectIntro />
         <ProjectMenus />

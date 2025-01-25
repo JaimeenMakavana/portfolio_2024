@@ -1,12 +1,12 @@
 "use client";
-import { lightGradients } from "@/app/page";
+import useStore from "@/store/store";
 import AnimationDiv from "@/UiComponents/GlobalComponent/AnimationDiv";
 import SpecificProjectHeader from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectHeader";
 import SpecificProjectIntro from "@/UiComponents/ProjectPageComponents/Project/SpecificProjectIntro";
 import { Suspense } from "react";
 
 const ChapterOnePage = () => {
-  const randomIndex = Math.floor(Math.random() * lightGradients.length);
+  const { lightGradients, randomIndex } = useStore();
 
   return (
     <div
@@ -20,7 +20,9 @@ const ChapterOnePage = () => {
         background={lightGradients[randomIndex].background}
         color={lightGradients[randomIndex].text}
       />
-      <SpecificProjectHeader  background={lightGradients[randomIndex].background} />
+      <SpecificProjectHeader
+        background={lightGradients[randomIndex].background}
+      />
       <div className="md:h-full md:overflow-y-auto scrollBar relative w-full">
         <Suspense>
           <SpecificProjectIntro />
