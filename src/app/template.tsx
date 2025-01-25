@@ -1,10 +1,10 @@
-"use client";
+"use client"; // Ensure this is a Client Component
 
-import useStore from "@/store/store";
+import { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import useStore from "@/store/store";
 
-const Template = ({ children }: { children: React.ReactNode }) => {
+const TemplateContent = ({ children }: { children: React.ReactNode }) => {
   const { setRandomIndex } = useStore();
   const router = usePathname();
   const params = useSearchParams();
@@ -14,6 +14,14 @@ const Template = ({ children }: { children: React.ReactNode }) => {
   }, [router, params.get("id")]);
 
   return <>{children}</>;
+};
+
+const Template = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TemplateContent>{children}</TemplateContent>
+    </Suspense>
+  );
 };
 
 export default Template;
